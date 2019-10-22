@@ -1,0 +1,55 @@
+﻿<Window x:Class="AllModelCreatorInWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AllModelCreatorInWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="950" Width="1200">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="8*"/>
+      <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+    <Grid.Resources>
+      <Style TargetType="Label">
+        <Setter Property="Foreground" Value="#FFFF6319"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value=" 100"/>
+        <Setter Property="FontSize" Value="13"/>
+      </Style>
+      <Style TargetType="DataGridColumnHeader">
+        <Setter Property="Foreground" Value="#FFFF6319"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value=" 100"/>
+        <Setter Property="FontSize" Value="13"/>
+      </Style>
+      <Style TargetType="Button">
+        <Setter Property="MinHeight" Value="30"/>
+        <Setter Property="MinWidth" Value="120"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Foreground" Value="#FFFF6319"/>
+        <Setter Property="MaxHeight" Value="60"/>
+      </Style>
+    </Grid.Resources>
+
+    <DataGrid Margin="3" Grid.Row="0" VerticalAlignment="Stretch" ItemsSource="{Binding TradePartnerFolders}" AutoGenerateColumns="False" MinColumnWidth="200">
+      <DataGrid.Resources>
+      </DataGrid.Resources>
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Directory Name" Binding="{Binding DirectoryName}" IsReadOnly="True" />
+        <DataGridTextColumn Header="Included NWD" Binding="{Binding IncludedNWDs}" IsReadOnly="True"/>
+        <DataGridTextColumn Header="Included NWCs" Binding="{Binding IncludedNWCs}" IsReadOnly="True"/>
+        <DataGridTextColumn Header="Changed Models" Binding="{Binding ChangedModels}" IsReadOnly="True"/>
+        <DataGridTextColumn Header="Update Complete" Binding="{Binding UpdateStatus}" IsReadOnly="True"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <StackPanel Grid.Row="1" Orientation="Horizontal">
+      <Button Content="Refresh" Command="{Binding RefreshFolders}"/>
+      <Button  Content="Run" Command="{Binding RunNavisworksAutomation}"/>
+    </StackPanel>
+  </Grid>
+</Window>

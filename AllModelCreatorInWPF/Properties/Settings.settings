@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AllModelCreatorInWPF.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="InputRootFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">G:\My Drive\02. Bay View\03. BIM\Trade Partners Workspace\02 Weekly Updates ALL\Current\</Value>
+    </Setting>
+    <Setting Name="NWDFolderQualifier" Type="System.String" Scope="User">
+      <Value Profile="(Default)">_</Value>
+    </Setting>
+    <Setting Name="OutputFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">G:\My Drive\02. Bay View\03. BIM\Trade Partners Workspace\02 Weekly Updates ALL\Current\ZZ Published Container NWD\CurrentContainer\</Value>
+    </Setting>
+    <Setting Name="LicenseServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">license.whiting-turner.com</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
